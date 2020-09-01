@@ -22,13 +22,18 @@ export const firestore = firebase.firestore();
 const batch = firestore.batch();
 
 export const addBooksAndPodcast = async() => {
-    const collections = Object.keys(data);
-     collections.forEach(newCollection => {
-       const collectionRef = firestore.collection(newCollection);
-       const newRef = collectionRef.doc(data[`${newCollection}`].id);
-       batch.set(newRef,( data[`${newCollection}`].books || data[`${newCollection}`].podcast ))
+    const docs = Object.keys(data);
+    const collectionsRef = firestore.collection('BooksAndPodcasts')
+     docs.forEach(doc => {
+        const newDocs = collectionsRef.doc(doc);
+        batch.set(newDocs, data[`${doc}`]);
     })
    return await batch.commit()
+}
+
+export const convertSnapshotToArr = snapshot => {
+    const docsData = snapshot.docs.map(doc => doc.data());
+    return docsData;
 }
 
 export default firebase

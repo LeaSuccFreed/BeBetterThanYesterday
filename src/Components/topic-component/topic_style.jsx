@@ -4,8 +4,11 @@ import {Link} from 'react-router-dom'
 export const TopicContainer = styled.div`
     display: flex;
     flex-grow: 1;
-    height: 100px;
-    border-bottom: ${props => props.borderbottom}
+    flex-direction: ${props => props.flexdirection};
+    border-bottom: ${props => props.borderbottom};
+`
+export const TopicHeader = styled.div`
+    display: flex;
 `
 
 export const TopicTitle = styled(Link)`

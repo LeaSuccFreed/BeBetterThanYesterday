@@ -1,14 +1,15 @@
 import React from 'react'
 
-import {TopicContainer, IconContainer, TopicTitle} from './topic_style.jsx'
+import {TopicContainer, TopicHeader, IconContainer, TopicTitle} from './topic_style.jsx'
 
-const Topic = ({children, title, borderbottom}) => {
+const Topic = ({children, title, borderbottom, classname}) => {
     return (
-        <TopicContainer borderbottom={borderbottom}>
-            <TopicTitle to={title.toLowerCase()}>{title}</TopicTitle>
-            <IconContainer>
-                {children}
-            </IconContainer>
+        <TopicContainer className={classname} flexdirection='column' borderbottom={borderbottom}>
+            <TopicHeader>
+                <TopicTitle to={title.toLowerCase()}>{title}</TopicTitle>
+                <IconContainer> {children} </IconContainer>
+            </TopicHeader>
+            <TopicContainer></TopicContainer>
         </TopicContainer>
     )
 }

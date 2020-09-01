@@ -5,7 +5,7 @@ export const data = {
         topic: 'SelfHelp_Books',
         id: uuidv4(),
         books:{
-            bestSellers: [
+            booksArray: [
                 {
                     Title: 'Can\'t Hurt Me: Master Your Mind and Defy the Odds',
                     Author: 'David Goggins',  
@@ -31,7 +31,7 @@ export const data = {
         topic: 'Business_Books',
         id: uuidv4(),
         books:{
-            bestSellers:[
+            booksArray:[
                 {
                     Title: 'Rich Dad Poor Dad: What the Rich Teach Their Kids About Money - That the Poor and Middle Class Do Not! ',
                     Author: 'Robert Kiyosaki',
