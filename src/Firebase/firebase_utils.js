@@ -32,8 +32,22 @@ export const addBooksAndPodcast = async() => {
 }
 
 export const convertSnapshotToArr = snapshot => {
-    const docsData = snapshot.docs.map(doc => doc.data());
-    return docsData;
+    try {
+        const docsData = snapshot.docs.map(doc => doc.data());
+
+        const preData = {
+            books: docsData.shift(),
+            podcasts: docsData.shift(),
+        }
+        const {books: {books}, podcasts:{podcasts}} = preData
+
+        return {
+            books,
+            podcasts,
+        }
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 export default firebase

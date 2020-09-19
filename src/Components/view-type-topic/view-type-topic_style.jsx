@@ -7,7 +7,9 @@ export const ViewTypeTopicContainer = styled.div.attrs(props => ({
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    margin: 2px 0 0 2px;
+    /* margin: 2px 0 0 2px; */
+    /* border-top: 2px solid #f5f0f0; */
+    border-left: 2px solid #f5f0f0;
     background: #ffff;
 
     & .SelfHelp{

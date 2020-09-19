@@ -3,10 +3,10 @@
       
     "plugins": [
         [
-            "babel-plugin-styled-components",
-            {
-                "displayName": false
-            }
+            "babel-plugin-styled-components"
+            // {
+            //     "displayName": false
+            // }
          ]
      ]
 }

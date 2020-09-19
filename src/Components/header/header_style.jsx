@@ -9,7 +9,8 @@ export const HeaderContainer = styled.div`
     display: flex;
     background: #ffff;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
+    border-bottom: 2px solid #f5f0f0;
 `
 
 export const TitleContainer = styled.div`
@@ -25,7 +26,6 @@ export const LogoContainer = styled(Link)`
     display: flex;
     width: 50px;
     height: 50px;
-    /* background: url('../../assets/brain.svg'); */
     cursor: pointer;
     justify-content: center;
     flex-grow: 1;

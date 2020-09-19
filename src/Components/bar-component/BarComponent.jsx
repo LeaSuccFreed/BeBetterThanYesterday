@@ -9,7 +9,7 @@ const BarComponent = (props) => {
 
     return (
         <BarContainer {...props}>
-            <IconContainer to='/self-improvment' width="65px" height="50px">
+            <IconContainer to='/selfhelp' width="65px" height="50px">
                 <SelfHelpIcon />
             </IconContainer> 
 

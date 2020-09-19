@@ -4,10 +4,9 @@ import {firestore, convertSnapshotToArr} from '../../../Firebase/firebase_utils.
 
 import {fetchStart, fetchSuccess, fetchFailure} from './fetchBooksAndPodcastSlice.js'
 
+ ////------WorkerSagas------------------
 export function* fetchBooksAndPodcastAsync(){
     try {
-        const allCollections = ["SelfHelp", "Podcast", "Podcast"]
-        //const data = yield allCollections.forEach(coll =>  firestore.collection(coll).get())
          const snapshot = yield firestore.collection('BooksAndPodcasts').get();
          const data = convertSnapshotToArr(snapshot)
 
@@ -17,9 +16,12 @@ export function* fetchBooksAndPodcastAsync(){
     }
 }
 
+
+////-----------------WatcherSagas--------------------
 export function* fetchBooksAndPodcastStart(){
-    yield takeEvery(
+    yield takeLatest(
         'fetchBooksAndPodcast/fetchStart',
         fetchBooksAndPodcastAsync
     )
 }
+

@@ -1,15 +1,27 @@
-import React from 'react'
+import React ,{useState, useEffect}from 'react'
+
+import { useSelector } from 'react-redux'
 
 import {TopicContainer, TopicHeader, IconContainer, TopicTitle} from './topic_style.jsx'
+import {SelfHelpIcon, MoneyIcon, PodcastIcon} from '../bar-component/sidebar_style.jsx'
 
 const Topic = ({children, title, borderbottom, classname}) => {
+
+
     return (
         <TopicContainer className={classname} flexdirection='column' borderbottom={borderbottom}>
             <TopicHeader>
                 <TopicTitle to={title.toLowerCase()}>{title}</TopicTitle>
-                <IconContainer> {children} </IconContainer>
+                 <IconContainer> 
+                    {
+                        title === 'SelfHelp' ? <SelfHelpIcon /> :
+                            title === 'Business' ? <MoneyIcon /> : <PodcastIcon/>
+                    } 
+                </IconContainer> 
             </TopicHeader>
-            <TopicContainer></TopicContainer>
+            <TopicContainer margin="130px" >
+                {children}
+            </TopicContainer>
         </TopicContainer>
     )
 }

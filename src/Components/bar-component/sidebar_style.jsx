@@ -11,9 +11,7 @@ const iconStyle = {
 export const BarContainer = styled.div`
     display: flex; 
     width: ${props => props.width} /*65px*/;
-     background: #ffff;
     flex-direction: ${props => props.flexDirection};
-    margin-top: 2px;
 `
 export const SelfHelpIcon = styled(SelfHelpSVG)`
     width: ${iconStyle.width};

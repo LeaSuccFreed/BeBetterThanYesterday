@@ -10,13 +10,13 @@ export const LoginContainer = styled(Link)`
      justify-content: flex-end; 
      align-items: flex-end;
      flex-grow: 1; 
-    cursor: pointer;
 `
 
 export const LoginIcon = styled(LoginIconComponent)`
     width: 48px;
     height: 48px;
     padding-right: 5%;
+    cursor: pointer;
 `
 
 export const LoginTxT = styled.p`

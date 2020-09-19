@@ -6,6 +6,8 @@ export const TopicContainer = styled.div`
     flex-grow: 1;
     flex-direction: ${props => props.flexdirection};
     border-bottom: ${props => props.borderbottom};
+    justify-content: ${props => props.justifycontent};
+    margin-left: ${props => props.margin}
 `
 export const TopicHeader = styled.div`
     display: flex;
